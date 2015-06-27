@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">青果网</string>
+    <string name="action_settings">Settings</string>
+    <string name="tel_label">请输入手机号</string>
+	<string name="btn_name">立即拨打</string>
+	<string name="filename">文件名称</string>
+	<string name="filecontent">文件内容</string>
+	<string name="file_btn_name">保存</string>
+	<string name="success">操作成功</string>
+	<string name="fail">操作失败</string>
+</resources>

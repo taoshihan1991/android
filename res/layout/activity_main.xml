@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:orientation="vertical"
+    tools:context=".MainActivity" >
+    	<ImageView
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:src="@drawable/softblog"
+	    />
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    >
+	    <TextView
+	        android:id="@+id/tel_label"
+	        android:layout_width="100dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/tel_label" />
+		<EditText 
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/mobile_input"
+		    android:layout_toRightOf="@id/tel_label"
+		    android:layout_alignTop="@id/tel_label"
+		    android:layout_marginLeft="5dp"
+		    />
+    
+	</RelativeLayout>
+		<Button 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/btn_name"
+		    android:id="@+id/tel_btn"
+		    />	
+
+	<TextView
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/filename"
+	    />
+	<EditText
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/filename"
+	    
+	    />
+	<TextView
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/filecontent"
+	    />
+	<EditText
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/filecontent"
+	    
+	    />
+	<Button 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/file_btn_name"
+		    android:id="@+id/file_btn"
+		    />	
+</LinearLayout>
