@@ -25,16 +25,21 @@ public final class R {
         public static final int softblog=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f080006;
+        public static final int action_settings=0x7f08000a;
+        public static final int amount=0x7f080009;
         public static final int file_btn=0x7f080005;
         public static final int filecontent=0x7f080004;
         public static final int filename=0x7f080003;
+        public static final int listView=0x7f080006;
         public static final int mobile_input=0x7f080001;
+        public static final int name=0x7f080007;
+        public static final int phone=0x7f080008;
         public static final int tel_btn=0x7f080002;
         public static final int tel_label=0x7f080000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int item=0x7f030001;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -47,6 +52,7 @@ public final class R {
         public static final int file_btn_name=0x7f050006;
         public static final int filecontent=0x7f050005;
         public static final int filename=0x7f050004;
+        public static final int noexist=0x7f050009;
         public static final int success=0x7f050007;
         public static final int tel_label=0x7f050002;
     }

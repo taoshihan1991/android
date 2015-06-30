@@ -63,4 +63,9 @@
 		    android:text="@string/file_btn_name"
 		    android:id="@+id/file_btn"
 		    />	
+	<ListView
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:id="@+id/listView"
+	    />
 </LinearLayout>

@@ -10,4 +10,5 @@
 	<string name="file_btn_name">保存</string>
 	<string name="success">操作成功</string>
 	<string name="fail">操作失败</string>
+	<string name="noexist">SD卡不存在</string>
 </resources>

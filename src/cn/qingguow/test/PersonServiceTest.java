@@ -14,7 +14,7 @@ public class PersonServiceTest extends AndroidTestCase {
 	}
 	public void testAdd(){
 		PersonService p = new PersonService();
-		int result=p.add(1,2);
+		int result=p.add();
 		Assert.assertEquals(3, result);
 	}
 }
