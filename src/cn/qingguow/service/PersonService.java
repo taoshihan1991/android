@@ -12,13 +12,14 @@ import android.database.sqlite.SQLiteDatabase;
 
 public class PersonService {
 	private DBOpenHelper dbhDbOpenHelper;
-	public void PersonSerivce(Context context){
-		
+
+	public PersonService(Context context) {
 		this.dbhDbOpenHelper=new DBOpenHelper(context);
 	}
+
 	public void save(String name){
 		SQLiteDatabase db=dbhDbOpenHelper.getWritableDatabase();
-		db.execSQL("insert into person (name) values(?)", new Object[]{name});
+		db.execSQL("insert into person (name) values(?)", new String[]{name});
 
 	}
 	public void update(int id,String name){
@@ -29,9 +30,9 @@ public class PersonService {
 		SQLiteDatabase db=dbhDbOpenHelper.getWritableDatabase();
 		db.execSQL("delete from person where id=?", new Object[]{id});
 	}
-	public Person find(integer id){
+	public Person find(int id){
 		SQLiteDatabase db=dbhDbOpenHelper.getReadableDatabase();
-		Cursor cursor=db.rawQuery("select * from person where id=?", new String[]{id.toString()});
+		Cursor cursor=db.rawQuery("select * from person where id=?", new String[]{String.valueOf(id)});
 		if(cursor.moveToFirst()){
 			int personid=cursor.getInt(cursor.getColumnIndex("id"));
 			String name=cursor.getString(cursor.getColumnIndex("name"));

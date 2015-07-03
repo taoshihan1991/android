@@ -1,8 +1,12 @@
 package cn.qingguow.taoshihan;
 
 import java.security.PublicKey;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import cn.qingguow.service.FileService;
+import cn.qingguow.service.PersonService;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,11 +20,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	private ListView listView;
+	private PersonService personService;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +62,7 @@ public class MainActivity extends Activity {
         //读取文件
         
         //listview显示数据
+        personService=new PersonService(this);
         listView=(ListView) this.findViewById(R.id.listView);
         show();
     }
@@ -80,7 +87,23 @@ public class MainActivity extends Activity {
      * 显示列表
      */
     public void show(){
-    	
+    	List<Person> persons=personService.getScollData(0, 10);
+    	List<Person> persons2=new ArrayList<Person>();
+    	persons2.add(new Person(1, "test1"));
+    	persons2.add(new Person(2, "test2"));
+    	persons2.add(new Person(2, "test2"));
+    	persons2.add(new Person(2, "test2"));
+    	persons2.add(new Person(2, "test2"));
+    	persons2.add(new Person(2, "test2"));
+    	List<HashMap<String, Object>> data=new ArrayList<HashMap<String, Object>>();
+    	for(Person person:persons2){
+    		HashMap<String, Object> item=new HashMap<String, Object>();
+    		item.put("name",person.name);
+    		item.put("id",person.id);
+    		data.add(item);
+    	}
+    	SimpleAdapter simpleAdapter=new SimpleAdapter(this, data, R.layout.item, new String[]{"name"}, new int[]{R.id.name});
+    	listView.setAdapter(simpleAdapter);
     }
     
 }
