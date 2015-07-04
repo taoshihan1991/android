@@ -57,6 +57,7 @@ public class PersonService {
 			String name=cursor.getString(cursor.getColumnIndex("name"));
 			persons.add(new Person(personid,name));
 		}
+		cursor.close();
 		return persons;
 	}
 

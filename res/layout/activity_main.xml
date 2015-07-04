@@ -1,35 +1,33 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-	android:orientation="vertical"
-    tools:context=".MainActivity" >
+<ScrollView
+         xmlns:android="http://schemas.android.com/apk/res/android" 
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
-	<RelativeLayout
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    >
-	    <TextView
+<LinearLayout 
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical" >
+	 <TextView
 	        android:id="@+id/tel_label"
-	        android:layout_width="100dp"
+	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
 	        android:text="@string/tel_label" />
-		<EditText 
+	<EditText 
 		    android:layout_width="fill_parent"
 		    android:layout_height="wrap_content"
 		    android:id="@+id/mobile_input"
 		    android:layout_toRightOf="@id/tel_label"
 		    android:layout_alignTop="@id/tel_label"
-		    android:layout_marginLeft="5dp"
-		    />
-    
-	</RelativeLayout>
-		<Button 
+
+	 />
+    <Button 
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
 		    android:text="@string/btn_name"
 		    android:id="@+id/tel_btn"
-		    />	
+	 />	
 
 	<TextView
 	    android:layout_width="fill_parent"
@@ -81,8 +79,14 @@
 	    android:layout_height="wrap_content"
 	    android:id="@+id/image_path_show"
 	    />
+	
+	<ListView
+	    android:layout_width="fill_parent"
+	    android:layout_height="200dp"
+	    android:id="@+id/listViewNews"
+	/>
 		    
-<LinearLayout
+	<LinearLayout
       android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
@@ -103,15 +107,11 @@
         android:text="存款"
         />
 </LinearLayout>	
-
-
-
-	
-	<ListView
+		<ListView
 	    android:layout_width="fill_parent"
-	    android:layout_height="fill_parent"
+	    android:layout_height="200dp"
 	    android:id="@+id/listView"
 	    />
-
 	
 </LinearLayout>
+</ScrollView>

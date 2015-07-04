@@ -7,6 +7,7 @@ import java.util.List;
 
 import cn.qingguow.service.FileService;
 import cn.qingguow.service.ImageService;
+import cn.qingguow.service.NewsService;
 import cn.qingguow.service.PersonService;
 
 import android.net.Uri;
@@ -77,8 +78,8 @@ public class MainActivity extends Activity {
         //listview显示数据
         personService=new PersonService(this);
         listView=(ListView) this.findViewById(R.id.listView);
-        //show();
-        show2();
+        show();
+        //show2();
         
         //网络图片查看器
         Button imageBtn=(Button)findViewById(R.id.image_path_btn);
@@ -102,6 +103,29 @@ public class MainActivity extends Activity {
 				
 			}
 		});
+        //文章列表显示
+        NewsService newsService=new NewsService();
+        @SuppressWarnings("unused")
+		ListView listViewNews=(ListView)findViewById(R.id.listViewNews);
+        try {
+        	List<News> listNews= newsService.getJsonNews();
+//        	List<News> listNews= new ArrayList<News>();
+//        	listNews.add(new News(1, "aaaaa"));
+//        	listNews.add(new News(1, "aaaaa"));
+//        	listNews.add(new News(1, "aaaaa"));
+	    	List<HashMap<String, Object>> data=new ArrayList<HashMap<String, Object>>();
+	    	for(News news:listNews){
+	    		HashMap<String, Object> item=new HashMap<String, Object>();
+	    		item.put("title",news.title);
+	    		data.add(item);
+	    	}
+	    	SimpleAdapter simpleAdapter=new SimpleAdapter(this, data, R.layout.news, new String[]{"title"}, new int[]{R.id.title});
+	    	listView.setAdapter(simpleAdapter);
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			 Log.e("haha", "Exception: "+Log.getStackTraceString(e));
+		}
     }
 
 

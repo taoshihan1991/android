@@ -4,6 +4,11 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import cn.qingguow.taoshihan.News;
+
 import android.R.integer;
 
 public class StreamTool {
@@ -20,5 +25,7 @@ public class StreamTool {
 		inputStream.close();
 		return outputStream.toByteArray();
 	}
+
+
 
 }
