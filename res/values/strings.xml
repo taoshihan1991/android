@@ -11,4 +11,7 @@
 	<string name="success">操作成功</string>
 	<string name="fail">操作失败</string>
 	<string name="noexist">SD卡不存在</string>
+	<string name="imagepath">网络图片路径</string>
+	<string name="image_path_btn">查看图片</string>
+	<string name="get_image_fail">获取图片失败</string>
 </resources>

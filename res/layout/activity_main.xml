@@ -4,11 +4,7 @@
     android:layout_height="fill_parent"
 	android:orientation="vertical"
     tools:context=".MainActivity" >
-    	<ImageView
-	    	android:layout_width="fill_parent"
-	    	android:layout_height="wrap_content"
-	    	android:src="@drawable/softblog"
-	    />
+
 	<RelativeLayout
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
@@ -63,9 +59,59 @@
 		    android:text="@string/file_btn_name"
 		    android:id="@+id/file_btn"
 		    />	
+	<TextView
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/imagepath"
+	    />
+	<EditText
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/imagepath"
+	    android:text="http://m.baidu.com/static/index/l.gif"
+	    />
+	<Button
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/image_path_btn"
+	    android:text="@string/image_path_btn"
+	    />
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/image_path_show"
+	    />
+		    
+<LinearLayout
+      android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <TextView 
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="姓名"
+        />
+	<TextView 
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="电话"
+        />
+	<TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="存款"
+        />
+</LinearLayout>	
+
+
+
+	
 	<ListView
 	    android:layout_width="fill_parent"
 	    android:layout_height="fill_parent"
 	    android:id="@+id/listView"
 	    />
+
+	
 </LinearLayout>

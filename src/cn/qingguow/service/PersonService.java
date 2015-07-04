@@ -60,4 +60,10 @@ public class PersonService {
 		return persons;
 	}
 
+	public Cursor getCursorScollData(int offset,int maxResult){
+		SQLiteDatabase db=dbhDbOpenHelper.getReadableDatabase();
+		List<Person> persons=new ArrayList<Person>();
+		Cursor cursor=db.rawQuery("select id as _id,name from person limit ?,?", new String[]{String.valueOf(offset),String.valueOf(maxResult)});
+		return cursor;
+	}
 }
