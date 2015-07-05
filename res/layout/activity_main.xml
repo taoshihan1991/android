@@ -9,6 +9,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 	android:orientation="vertical" >
+
+		
+	<TextView
+	   		style="@style/main_title"
+	   		
+	        android:layout_width="fill_parent"
+	        android:layout_height="30dp"
+	        android:text="@string/main_title" />
+	<Button 
+	    style="@style/extend_btn"
+	    android:text="@string/other_activity_btn"
+	    android:onClick="openActivity"
+	    />
 	 <TextView
 	        android:id="@+id/tel_label"
 	        android:layout_width="fill_parent"
@@ -23,8 +36,7 @@
 
 	 />
     <Button 
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
+        	style="@style/extend_btn"
 		    android:text="@string/btn_name"
 		    android:id="@+id/tel_btn"
 	 />	
@@ -52,11 +64,10 @@
 	    
 	    />
 	<Button 
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:text="@string/file_btn_name"
-		    android:id="@+id/file_btn"
-		    />	
+	    style="@style/extend_btn"
+		android:text="@string/file_btn_name"
+		android:id="@+id/file_btn"
+		/>	
 	<TextView
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
@@ -69,8 +80,7 @@
 	    android:text="http://m.baidu.com/static/index/l.gif"
 	    />
 	<Button
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
+	    style="@style/extend_btn"
 	    android:id="@+id/image_path_btn"
 	    android:text="@string/image_path_btn"
 	    />
@@ -79,18 +89,28 @@
 	    android:layout_height="wrap_content"
 	    android:id="@+id/image_path_show"
 	    />
-	
+		<Button
+	    style="@style/extend_btn"
+	    android:id="@+id/load_news_list"
+	    android:text="@string/load_news_list"
+	    android:onClick="loadNewsList"
+	    />
 	<ListView
 	    android:layout_width="fill_parent"
 	    android:layout_height="200dp"
 	    android:id="@+id/listViewNews"
 	/>
-		    
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	    android:id="@+id/load_sqllite_list"
+	    android:text="@string/load_sqllite_list"
+	    />
 	<LinearLayout
-      android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    >
+      	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	>
     <TextView 
         android:layout_width="120dp"
         android:layout_height="wrap_content"
@@ -109,9 +129,13 @@
 </LinearLayout>	
 		<ListView
 	    android:layout_width="fill_parent"
-	    android:layout_height="200dp"
+	    android:layout_height="100dp"
 	    android:id="@+id/listView"
 	    />
+
+		    
+
+
 	
 </LinearLayout>
 </ScrollView>

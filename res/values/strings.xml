@@ -3,15 +3,25 @@
 
     <string name="app_name">青果网</string>
     <string name="action_settings">Settings</string>
+    <string name="main_title">安卓测试</string>
     <string name="tel_label">请输入手机号</string>
-	<string name="btn_name">立即拨打</string>
+	<string name="btn_name">拨打电话</string>
 	<string name="filename">文件名称</string>
 	<string name="filecontent">文件内容</string>
-	<string name="file_btn_name">保存</string>
+	<string name="file_btn_name">保存文件SD卡</string>
 	<string name="success">操作成功</string>
 	<string name="fail">操作失败</string>
 	<string name="noexist">SD卡不存在</string>
 	<string name="imagepath">网络图片路径</string>
-	<string name="image_path_btn">查看图片</string>
+	<string name="image_path_btn">加载远程图片</string>
+	<string name="load_sqllite_list">读取SQLlite列表显示</string>
+	
+	<string name="load_news_list">读取远程JSON数据列表显示</string>
+	<string name="load_news_fail">读取文章失败</string>
+	
 	<string name="get_image_fail">获取图片失败</string>
+	<string name="other_activity_btn">打开新activity</string>
+	<string name="other_activity_name">新的activity</string>
+	<string name="other_activity_hello">新的activity的hello World</string>
+	<string name="close_other_activity">关闭activity</string>
 </resources>

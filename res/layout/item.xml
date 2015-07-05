@@ -4,20 +4,17 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
     <TextView 
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        style="@style/main_list_short"
         android:id="@+id/name"
         android:text="xxxxxx"
         />
 	<TextView 
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        style="@style/main_list_short"
         android:id="@+id/phone"
         android:text="15266969696"
         />
 	<TextView 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        style="@style/main_list_short"
         android:id="@+id/amount"
         android:text="100"
         />

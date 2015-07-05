@@ -3,10 +3,10 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
     <TextView 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+       style="@style/main_list"
         android:id="@+id/title"
         android:text="xxxxxx"
+
         />
 
 </LinearLayout>

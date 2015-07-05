@@ -1,0 +1,25 @@
+<ScrollView
+         xmlns:android="http://schemas.android.com/apk/res/android" 
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+<LinearLayout 
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical" >
+	 <TextView
+	     	android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/other_activity_hello" 
+	        android:id="@+id/other_hello"
+	        />
+	 <Button
+	     	android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/close_other_activity" 
+	        android:id="@+id/close_other_activity"
+	        android:onClick="closeActivity"
+	        />
+</LinearLayout>
+</ScrollView>

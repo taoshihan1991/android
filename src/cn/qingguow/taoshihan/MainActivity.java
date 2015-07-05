@@ -103,7 +103,13 @@ public class MainActivity extends Activity {
 				
 			}
 		});
-        //文章列表显示
+
+    }
+    /*
+     * 加载json数据
+     */
+    public void loadNewsList(View v){
+    	 //文章列表显示
         NewsService newsService=new NewsService();
         @SuppressWarnings("unused")
 		ListView listViewNews=(ListView)findViewById(R.id.listViewNews);
@@ -120,15 +126,13 @@ public class MainActivity extends Activity {
 	    		data.add(item);
 	    	}
 	    	SimpleAdapter simpleAdapter=new SimpleAdapter(this, data, R.layout.news, new String[]{"title"}, new int[]{R.id.title});
-	    	listView.setAdapter(simpleAdapter);
+	    	listViewNews.setAdapter(simpleAdapter);
 		} catch (Exception e) {
-
+			Toast.makeText(this, R.string.load_news_fail, 1).show();
 			e.printStackTrace();
 			 Log.e("haha", "Exception: "+Log.getStackTraceString(e));
 		}
     }
-
-
 
     
 
@@ -180,5 +184,22 @@ public class MainActivity extends Activity {
     	SimpleAdapter simpleAdapter=new SimpleAdapter(this, data, R.layout.item, new String[]{"name"}, new int[]{R.id.name});
     	listView.setAdapter(simpleAdapter);
     }
+    /*
+     * 打开新的activity
+     */
+    public void openActivity(View v){
+    	Intent intent=new Intent();
+    	intent.setClass(this, OtherActivity.class);
+    	intent.putExtra("website", "青果网");
+    	intent.putExtra("age", 2);
+    	//startActivity(intent);
+    	startActivityForResult(intent, 200);
+    }
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		String result=data.getStringExtra("result");
+		Toast.makeText(this, result, 1).show();
+	}
     
 }
