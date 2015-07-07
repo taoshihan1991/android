@@ -8,7 +8,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/QingguowTheme" >
        
         <activity
             android:name=".MainActivity"
@@ -23,7 +23,12 @@
             android:name=".OtherActivity"
             android:label="@string/other_activity_name"
             >
-      
+        </activity>
+        <activity
+            android:name=".SingleTaskActivity"
+            android:label="@string/singletask_activity_name"
+            android:launchMode="singleTask"
+            >
         </activity>
         
         

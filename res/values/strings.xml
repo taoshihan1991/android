@@ -20,8 +20,15 @@
 	<string name="load_news_fail">读取文章失败</string>
 	
 	<string name="get_image_fail">获取图片失败</string>
-	<string name="other_activity_btn">打开新activity</string>
+	<string name="other_activity_btn">打开新activity(上动画)</string>
 	<string name="other_activity_name">新的activity</string>
 	<string name="other_activity_hello">新的activity的hello World</string>
 	<string name="close_other_activity">关闭activity</string>
+	
+	<string name="openSingleTaskActivity">打开SingleTask的activity(左动画)</string>
+	<string name="singletask_activity_name">这是SingleTask的activity</string>
+	
+	<string name="article_title">文章标题</string>
+	<string name="article_content">文章内容</string>
+	<string name="article_save_btn">保存文章</string>
 </resources>

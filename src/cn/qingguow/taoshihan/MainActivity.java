@@ -26,6 +26,9 @@ import android.text.Editable;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.view.Window;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -44,7 +47,16 @@ public class MainActivity extends Activity {
         StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder().detectLeakedSqlLiteObjects().detectLeakedClosableObjects().penaltyLog().penaltyDeath().build());
     	
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);//去掉标题栏
         setContentView(R.layout.activity_main);
+        
+        //主标题动画
+       Animation mainTitleAnimation=AnimationUtils.loadAnimation(this, R.anim.alpha);
+        //Animation mainTitleAnimation=AnimationUtils.loadAnimation(this, R.anim.translate);
+       // Animation mainTitleAnimation=AnimationUtils.loadAnimation(this, R.anim.scale);
+        TextView mainTitleTextView=(TextView)findViewById(R.id.main_title);
+        mainTitleTextView.startAnimation(mainTitleAnimation);
+        
         Button button=(Button)this.findViewById(R.id.tel_btn);
         button.setOnClickListener(new ButtonClickListener());
         
@@ -194,6 +206,7 @@ public class MainActivity extends Activity {
     	intent.putExtra("age", 2);
     	//startActivity(intent);
     	startActivityForResult(intent, 200);
+    	this.overridePendingTransition(R.anim.top_to, R.anim.bottom_to);
     }
 
 	@Override
@@ -201,5 +214,12 @@ public class MainActivity extends Activity {
 		String result=data.getStringExtra("result");
 		Toast.makeText(this, result, 1).show();
 	}
+    /*
+     * 打开SingleTask的activity
+     */
+    public void openSingleTaskActivity(View v){
+    	startActivity(new Intent(this,SingleTaskActivity.class));
+    	this.overridePendingTransition(R.anim.right_left, R.anim.left_right);
+    }
     
 }

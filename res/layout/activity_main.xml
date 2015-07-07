@@ -9,18 +9,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 	android:orientation="vertical" >
-
-		
-	<TextView
-	   		style="@style/main_title"
-	   		
-	        android:layout_width="fill_parent"
+	<FrameLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="10dp"
+	 	android:background="#f5f5f5"
+	    >
+	    <Button
+	        android:layout_width="wrap_content"
 	        android:layout_height="30dp"
-	        android:text="@string/main_title" />
+	        android:paddingLeft="10dp"
+	    android:paddingRight="10dp"
+	        android:text="后退"
+	        android:layout_gravity="left|center_vertical"
+	        android:background="@drawable/shape"
+	        android:textColor="#333"
+	        />
+	    <TextView
+	   		style="@style/main_title"
+	   		android:id="@+id/main_title"
+	        android:text="@string/main_title" 
+	        />
+	    <Button
+	        android:layout_width="wrap_content"
+	        android:layout_height="30dp"
+	        android:paddingLeft="10dp"
+	    android:paddingRight="10dp"
+	        android:text="前进"
+	        android:layout_gravity="right|center_vertical"
+	        android:background="@drawable/shape"
+	        android:textColor="#333"
+	        />
+
+	</FrameLayout>
+	<View
+	    android:layout_width="match_parent"
+	    android:layout_height="0.5dip"
+	    android:background="#e5e5e5" />
+
 	<Button 
 	    style="@style/extend_btn"
 	    android:text="@string/other_activity_btn"
 	    android:onClick="openActivity"
+	    />
+	<Button 
+	    style="@style/extend_btn"
+	    android:text="@string/openSingleTaskActivity"
+	    android:onClick="openSingleTaskActivity"
 	    />
 	 <TextView
 	        android:id="@+id/tel_label"
