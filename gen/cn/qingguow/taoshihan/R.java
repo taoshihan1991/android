@@ -30,17 +30,21 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int shape=0x7f020001;
-        public static final int softblog=0x7f020002;
-        public static final int top_bar=0x7f020003;
+        public static final int border_radius=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int layer_list=0x7f020002;
+        public static final int shape=0x7f020003;
+        public static final int shape2=0x7f020004;
+        public static final int softblog=0x7f020005;
+        public static final int top_bar=0x7f020006;
     }
     public static final class id {
-        public static final int action_settings=0x7f090018;
+        public static final int action_settings=0x7f09001a;
         public static final int amount=0x7f090016;
         public static final int article_content=0x7f090012;
         public static final int article_save_btn=0x7f090013;
         public static final int article_title=0x7f090011;
+        public static final int back_img=0x7f090018;
         public static final int close_other_activity=0x7f090010;
         public static final int file_btn=0x7f090007;
         public static final int filecontent=0x7f090006;
@@ -55,6 +59,7 @@ public final class R {
         public static final int main_title=0x7f090001;
         public static final int mobile_input=0x7f090003;
         public static final int name=0x7f090014;
+        public static final int on_img=0x7f090019;
         public static final int other_hello=0x7f09000f;
         public static final int phone=0x7f090015;
         public static final int scrollView1=0x7f090000;
@@ -68,6 +73,7 @@ public final class R {
         public static final int activity_singletask=0x7f030002;
         public static final int item=0x7f030003;
         public static final int news=0x7f030004;
+        public static final int part=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f080000;
