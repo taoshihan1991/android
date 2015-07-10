@@ -13,13 +13,23 @@ import cn.qingguow.utils.StreamTool;
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.Editable;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 public class SingleTaskActivity extends Activity {
 	public EditText article_title;
 	public EditText article_content;
+	private float startX;
+	private ViewFlipper viewFlipper;
+	private Animation inRightToLeftAnimation;
+	private Animation outRightToLeftAnimation;
+	private Animation inLeftToRightAnimation;
+	private Animation outLeftToRightAnimation;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -27,6 +37,14 @@ public class SingleTaskActivity extends Activity {
 		
 		article_title=(EditText)findViewById(R.id.article_title);
 		article_content=(EditText)findViewById(R.id.article_content);
+		
+		//滑动界面切换
+		viewFlipper=(ViewFlipper)findViewById(R.id.viewFlipper);
+		inRightToLeftAnimation=AnimationUtils.loadAnimation(this,R.anim.in_righttoleft);
+		outRightToLeftAnimation=AnimationUtils.loadAnimation(this,R.anim.out_righttoleft);
+		
+		inLeftToRightAnimation=AnimationUtils.loadAnimation(this, R.anim.in_lefttoright);
+		outLeftToRightAnimation=AnimationUtils.loadAnimation(this, R.anim.out_lefttoright);
 	}
 	/*
 	 * 添加文章
@@ -78,4 +96,30 @@ public class SingleTaskActivity extends Activity {
 		}
 		return null;
 	}
+	/*
+	 * 滑动切换界面
+	 * @see android.app.Activity#onTouchEvent(android.view.MotionEvent)
+	 */
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		
+		if(event.getAction()==MotionEvent.ACTION_DOWN){
+			startX=event.getX();
+		}else if (event.getAction()==MotionEvent.ACTION_UP) {
+			float endX=event.getX();
+			if(startX>endX){
+				viewFlipper.setInAnimation(inRightToLeftAnimation);
+				viewFlipper.setOutAnimation(outRightToLeftAnimation);
+				viewFlipper.showNext();
+			}else if(startX<endX){
+				viewFlipper.setInAnimation(inLeftToRightAnimation);
+				viewFlipper.setOutAnimation(outLeftToRightAnimation);
+				viewFlipper.showPrevious();
+			}
+		}
+	
+
+		return super.onTouchEvent(event);
+	}
+	
 }

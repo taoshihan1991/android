@@ -11,11 +11,15 @@ public final class R {
     public static final class anim {
         public static final int alpha=0x7f040000;
         public static final int bottom_to=0x7f040001;
-        public static final int left_right=0x7f040002;
-        public static final int right_left=0x7f040003;
-        public static final int scale=0x7f040004;
-        public static final int top_to=0x7f040005;
-        public static final int translate=0x7f040006;
+        public static final int in_lefttoright=0x7f040002;
+        public static final int in_righttoleft=0x7f040003;
+        public static final int left_right=0x7f040004;
+        public static final int out_lefttoright=0x7f040005;
+        public static final int out_righttoleft=0x7f040006;
+        public static final int right_left=0x7f040007;
+        public static final int scale=0x7f040008;
+        public static final int top_to=0x7f040009;
+        public static final int translate=0x7f04000a;
     }
     public static final class attr {
     }
@@ -39,12 +43,12 @@ public final class R {
         public static final int top_bar=0x7f020006;
     }
     public static final class id {
-        public static final int action_settings=0x7f09001a;
-        public static final int amount=0x7f090016;
-        public static final int article_content=0x7f090012;
-        public static final int article_save_btn=0x7f090013;
-        public static final int article_title=0x7f090011;
-        public static final int back_img=0x7f090018;
+        public static final int action_settings=0x7f09001b;
+        public static final int amount=0x7f090017;
+        public static final int article_content=0x7f090013;
+        public static final int article_save_btn=0x7f090014;
+        public static final int article_title=0x7f090012;
+        public static final int back_img=0x7f090019;
         public static final int close_other_activity=0x7f090010;
         public static final int file_btn=0x7f090007;
         public static final int filecontent=0x7f090006;
@@ -58,14 +62,15 @@ public final class R {
         public static final int load_sqllite_list=0x7f09000d;
         public static final int main_title=0x7f090001;
         public static final int mobile_input=0x7f090003;
-        public static final int name=0x7f090014;
-        public static final int on_img=0x7f090019;
+        public static final int name=0x7f090015;
+        public static final int on_img=0x7f09001a;
         public static final int other_hello=0x7f09000f;
-        public static final int phone=0x7f090015;
+        public static final int phone=0x7f090016;
         public static final int scrollView1=0x7f090000;
         public static final int tel_btn=0x7f090004;
         public static final int tel_label=0x7f090002;
-        public static final int title=0x7f090017;
+        public static final int title=0x7f090018;
+        public static final int viewFlipper=0x7f090011;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

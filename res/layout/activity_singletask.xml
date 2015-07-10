@@ -3,7 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    <TextView
+    <ViewFlipper 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewFlipper"
+        >
+       <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:orientation="vertical" >
+		    <ImageView 
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:src="@drawable/softblog"
+		        />
+           <TextView 
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:text="第一页"
+               />
+              <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/article_title"
@@ -29,5 +48,18 @@
         android:text="@string/article_save_btn"
         android:onClick="saveArticle"
         />
+       </LinearLayout>
+       <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:orientation="vertical" >
+           <TextView 
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:text="第二页"
+               />
+       </LinearLayout>
+    </ViewFlipper>
+ 
 
 </LinearLayout>
